@@ -8,6 +8,7 @@ var examp = new ExamBatch
     Name = "Exam Batch 1",
     Employees = null,
     Exams = null,
+    OtherExam = null,
     NextExamBatch = new NextExamBatch
     {
         Employees = null,

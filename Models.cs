@@ -13,6 +13,13 @@ public class Exam
     public string Subject { get; set; }
 }
 
+public class OtherExam
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal OtherValue { get; set; }
+}
+
 public class ExamBatch
 {
     public int Id { get; set; }
@@ -20,6 +27,7 @@ public class ExamBatch
     public List<Employee> Employees { get; set; }
     public List<Exam> Exams { get; set; }
     public NextExamBatch NextExamBatch { get; set; }
+    public OtherExam OtherExam { get; set; }
     public string Remarks { get; set; }
 }
 
