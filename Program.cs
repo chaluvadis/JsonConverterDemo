@@ -15,9 +15,13 @@ var examp = new ExamBatch
     }
 };
 
-var options = new JsonSerializerOptions();
-options.Converters.Add(new NullToEmptyArrayConverter<object>());
-
+var options = new JsonSerializerOptions
+{
+    Converters =
+    {
+        new NullToListConverter()
+    }
+};
 // Serialize the object with the custom converter
 string json = JsonSerializer.Serialize(examp, options);
 Console.WriteLine(json);
